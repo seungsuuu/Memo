@@ -45,4 +45,12 @@ public class MemoController {
 
     }
 
+    //HW: 내용에 특정 키워드가 포함된 메모 조회
+    @GetMapping("/memos/contents")
+    public List<MemoResponseDto> getMemosByKeyword(@RequestParam String keyword) {
+
+        return memoService.getMemosByKeyword(keyword);
+
+    }
+
 }
